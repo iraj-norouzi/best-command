@@ -1,0 +1,2 @@
+# how to replaced string in file
+sed -i -e 's/8000/8001/g' license.txt
