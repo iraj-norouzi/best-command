@@ -1,2 +1,11 @@
 # how to replaced string in file
 sed -i -e 's/8000/8001/g' license.txt
+#######################################
+dumpe2fs /dev/sda1 | grep -i superblock == mke2fs -n /dev/sda3 #show superblock primary and backup
+umount /dev/sda1
+e2fsck -f /dev/sda1 #if fatal erorr use under command
+e2fsck -b /dev/sda1 #use backup superblock
+or 
+e2fsck -f -b 8139 /dev/sda1
+
+
